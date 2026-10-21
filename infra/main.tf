@@ -37,7 +37,7 @@ resource "aws_lambda_function" "hello_lambda" {
   function_name = "hello-lambda"
   filename      = "../lambda_function.zip"   # <- Use local file
   handler       = "lambda_function.lambda_handler"
-  runtime       = "python3.9"
+  runtime       = "python3.12"
   role          = aws_iam_role.lambda_exec_role.arn
 
   tags = {
